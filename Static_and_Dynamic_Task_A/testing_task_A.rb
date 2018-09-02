@@ -8,6 +8,7 @@ class CardGame
   def initialize(suit, value)
     @suit = suit
     @value = value;
+    # @value = value
   end
 
   def checkforAce(card)
@@ -19,16 +20,20 @@ class CardGame
   end
 
   dif highest_card(card1 card2)
+  # def highest_card(card1, card2)
   if card1.value > card2.value
     return card.name
+    # return card1
   else
     card2
+    # return card2
   end
 end
 end
 
 def self.cards_total(cards)
   total
+  # total = 0
   for card in cards
     total += card.value
     return "You have a total of" + total
