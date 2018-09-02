@@ -15,6 +15,7 @@ class CardGame
 
   def checkforAce(card)
     if card.value = 1
+      # if card.value ==1
       return true
     else
       return false
