@@ -32,12 +32,14 @@ class CardGame
   end
 end
 end
-
+# Unnecessary end
 def self.cards_total(cards)
   total
   # total = 0
   for card in cards
     total += card.value
     return "You have a total of" + total
+    # Line 41 should come after 'end'
   end
 end
+# end missing
