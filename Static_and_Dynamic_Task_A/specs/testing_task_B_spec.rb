@@ -1,6 +1,6 @@
 require('minitest/autorun')
 require('minitest/rg')
-require('../testing_task_B.rb')
+require_relative('../testing_task_B.rb')
 
 class CardGameTest < MiniTest::Test
 
