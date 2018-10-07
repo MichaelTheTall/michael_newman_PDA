@@ -18,4 +18,11 @@ describe('calculator', function () {
     assert.equal(calculator.runningTotal, 5)
   })
 
+  // test calculator.subtract()
+  it('Test that 7-4 = 3', function(){
+    calculator.previousTotal = 7;
+    calculator.subtract(4);
+    assert.equal(calculator.runningTotal, 3)
+  })
+
 });
