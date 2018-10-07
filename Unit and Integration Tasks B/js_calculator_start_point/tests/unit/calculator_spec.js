@@ -32,11 +32,17 @@ describe('calculator', function () {
     assert.equal(calculator.runningTotal, 15)
   })
 
-    // test calculator.divide()
-    it('Test that 21 / 7 = 3', function(){
-      calculator.previousTotal = 21;
-      calculator.divide(7);
-      assert.equal(calculator.runningTotal, 3)
-    })
+  // test calculator.divide()
+  it('Test that 21 / 7 = 3', function(){
+    calculator.previousTotal = 21;
+    calculator.divide(7);
+    assert.equal(calculator.runningTotal, 3)
+  })
 
+  // test calculator.numberClick()
+  it('Test that pressing 9 twice gets 99', function(){
+    calculator.numberClick(9);
+    calculator.numberClick(9);
+    assert.equal(calculator.runningTotal, 99)
+  })
 });
