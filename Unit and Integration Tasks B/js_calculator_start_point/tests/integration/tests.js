@@ -25,4 +25,14 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('666')
   })
 
+  // plus
+  it('should show 12 if you press 6 + 6 +', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number6')).click();
+    element(by.css('#operator_add')).click();
+    element(by.css('#number6')).click();
+    element(by.css('#operator_add')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('12')
+  })
+
 });
