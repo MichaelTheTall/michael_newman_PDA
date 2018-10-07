@@ -76,5 +76,26 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('18')
   })
 
+  // negative numbers
+  it('should show -2 if you enter 7 - 9 =', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number7')).click();
+    element(by.css('#operator_subtract')).click();
+    element(by.css('#number9')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('-2')
+  })
+
+  // decimals
+  it('should show 1.5 if you enter 3 / 2 =', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number3')).click();
+    element(by.css('#operator_divide')).click();
+    element(by.css('#number2')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('1.5')
+  })
+
+
 
 });
