@@ -25,4 +25,12 @@ describe('calculator', function () {
     assert.equal(calculator.runningTotal, 3)
   })
 
+  // test calculator.multiply()
+  it('Test that 3 x 5 = 15', function(){
+    calculator.previousTotal = 3;
+    calculator.multiply(5);
+    assert.equal(calculator.runningTotal, 15)
+  })
+
+
 });
