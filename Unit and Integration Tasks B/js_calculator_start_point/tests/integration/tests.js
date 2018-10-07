@@ -35,4 +35,14 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('12')
   })
 
+  // minus
+  it('should show 1 if you press 6 - 5 -', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number6')).click();
+    element(by.css('#operator_subtract')).click();
+    element(by.css('#number5')).click();
+    element(by.css('#operator_subtract')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('1')
+  })
+
 });
