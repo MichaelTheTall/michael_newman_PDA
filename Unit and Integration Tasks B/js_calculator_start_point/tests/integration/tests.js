@@ -55,5 +55,26 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('10')
   })
 
+  // divide
+  it('should show 5 if you press 10 / 2 /', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number1')).click();
+    element(by.css('#number0')).click();
+    element(by.css('#operator_divide')).click();
+    element(by.css('#number2')).click();
+    element(by.css('#operator_divide')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('5')
+  })
+
+  // equals
+  it('should show 18 if you press 9 + 9 =', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number9')).click();
+    element(by.css('#operator_add')).click();
+    element(by.css('#number9')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('18')
+  })
+
 
 });
