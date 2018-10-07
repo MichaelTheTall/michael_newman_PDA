@@ -45,4 +45,15 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('1')
   })
 
+  // multiply
+  it('should show 10 if you press 5 x 2 x', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number5')).click();
+    element(by.css('#operator_multiply')).click();
+    element(by.css('#number2')).click();
+    element(by.css('#operator_multiply')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('10')
+  })
+
+
 });
