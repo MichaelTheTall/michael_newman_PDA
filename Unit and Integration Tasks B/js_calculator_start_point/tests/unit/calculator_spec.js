@@ -32,5 +32,11 @@ describe('calculator', function () {
     assert.equal(calculator.runningTotal, 15)
   })
 
+    // test calculator.divide()
+    it('Test that 21 / 7 = 3', function(){
+      calculator.previousTotal = 21;
+      calculator.divide(7);
+      assert.equal(calculator.runningTotal, 3)
+    })
 
 });
