@@ -16,4 +16,13 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('2')
   })
 
+  // multiple number button presses
+  it('should show 666 if you press 6 three times', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number6')).click();
+    element(by.css('#number6')).click();
+    element(by.css('#number6')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('666')
+  })
+
 });
