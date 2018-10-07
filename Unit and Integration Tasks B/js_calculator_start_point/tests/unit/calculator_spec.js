@@ -45,4 +45,19 @@ describe('calculator', function () {
     calculator.numberClick(9);
     assert.equal(calculator.runningTotal, 99)
   })
+
+  // test calculator.operatorClick()
+  it('Test that pressing 9 + 3 + 3 - 6 = 9', function(){
+    calculator.numberClick(9);
+    calculator.operatorClick('+');
+    calculator.numberClick(3);
+    calculator.operatorClick('+')
+    calculator.numberClick(3);
+    calculator.operatorClick('-');
+    calculator.numberClick(6);
+    calculator.operatorClick('=');
+    assert.equal(calculator.runningTotal, 9)
+  })
+
+
 });
