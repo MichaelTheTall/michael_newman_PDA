@@ -96,14 +96,24 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('1.5')
   })
 
-  // divide by zero
-  it('should show Infinity if you enter 3 / 0 =', function(){
+  // divide by zero original
+  // it('should show Infinity if you enter 3 / 0 =', function(){
+  //   running_total = element(by.css('#running_total'))
+  //   element(by.css('#number3')).click();
+  //   element(by.css('#operator_divide')).click();
+  //   element(by.css('#number0')).click();
+  //   element(by.css('#operator_equals')).click();
+  //   expect(running_total.getAttribute('value')).to.eventually.equal('Infinity')
+  // })
+
+  // divide by zero new
+  it('should show "You cannot divide by zero!" if you enter 3 / 0 =', function(){
     running_total = element(by.css('#running_total'))
     element(by.css('#number3')).click();
     element(by.css('#operator_divide')).click();
     element(by.css('#number0')).click();
     element(by.css('#operator_equals')).click();
-    expect(running_total.getAttribute('value')).to.eventually.equal('Infinity')
+    expect(running_total.getAttribute('value')).to.eventually.equal('You cannot divide by zero!')
   })
 
 
