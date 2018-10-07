@@ -59,5 +59,16 @@ describe('calculator', function () {
     assert.equal(calculator.runningTotal, 9)
   })
 
+  // test calculator.clearClick()
+  it('Test that pressing 9 + 3 + 3 CLEAR = 12', function(){
+    calculator.numberClick(9);
+    calculator.operatorClick('+');
+    calculator.numberClick(3);
+    calculator.operatorClick('+')
+    calculator.numberClick(3);
+    calculator.clearClick();
+    calculator.operatorClick('=')
+    assert.equal(calculator.runningTotal, 12)
+  })
 
 });
